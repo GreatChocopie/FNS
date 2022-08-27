@@ -70,7 +70,6 @@ summary::marker {
     text-align: center;
     vertical-align: middle;
     color: #ffffff;
-   
 }
 
 // Хедер
@@ -92,16 +91,19 @@ summary::marker {
 }
 
 .header-wrapper1__container {
+    height: 32px;
+    box-sizing: border-box;
     margin: 0 auto;
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
+    align-content: center;
 }
 
 .header-wrapper1__actual {
     position: relative;
     margin: 0;
-    padding-left: 15px;
+    padding-left: 10px;
     display: flex;
     justify-content: space-between;
     font-family: $font-family-roboto;
@@ -109,6 +111,13 @@ summary::marker {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
+    color: #a5b8c7;
+    vertical-align: middle;
+    text-align: center;
+}
+.header-wrapper1__actual span {
+    color: #ffffff;
+    
 }
 
 .header-wrapper1__actual::after {
@@ -116,14 +125,12 @@ summary::marker {
     position: absolute;
     width: 4px;
     height: 4px;
-    top: 50%;
-    left: 50%;
-    color: #27b269;
+    top: 4px;
+    left: 0;
+    background-color: #27b269;
     border-radius: 50%;
 }
 
-.header-wrapper1__work-schedule {
-}
 
 .header-wrapper1__work-schedule--desktop {
     display: none;
@@ -131,14 +138,24 @@ summary::marker {
 .header-wrapper1__work-schedule--mobile {
     position: relative;
     margin: 0;
-    padding-left: 25px;
+    padding-left: 21px;
     font-family: $font-family-roboto;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
 }
-
+.header-wrapper1__work-schedule--mobile::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -2px;
+    left: 0;
+    background-image: url(../img/24.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
 .header-wrapper1__networks {
     display: none;
 }
@@ -153,7 +170,7 @@ summary::marker {
     margin: 0 auto;
     padding: 15px;
     box-sizing: border-box;
-    
+    align-content: center;
 }
 .top-menu {
     display: flex;
@@ -203,9 +220,194 @@ summary::marker {
 }
 
 .top-menu__toggle .top-menu__toggle-span {
-   
     width: 100%;
     height: 2px;
     background: #282828;
     border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+    .header-wrapper1__container {
+        margin: 0 auto;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .header-wrapper1__actual {
+        margin-right: 24px;
+       
+    }
+    .header-wrapper1__work-schedule {
+        display: flex;
+       
+    }
+    .header-wrapper1__work-schedule--mobile {
+        display: none;
+    }
+    .header-wrapper1__work-schedule--desktop {
+        display: block;
+        position: relative;
+        margin: 0;
+
+        padding-left: 21px;
+        font-family: $font-family-roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        
+    }
+    .header-wrapper1__work-schedule--desktop::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: -2px;
+        left: 0;
+        background-image: url(../img/24.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    .header-wrapper1__networks {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 0;
+        margin: 0;
+        margin-left: auto;
+    }
+    .networks__item {
+        padding: 0;
+        margin: 0;
+        margin-right: 16px;
+    }
+    .networks__item:last-child {
+        margin: 0;
+    }
+    .networks__link-inst {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-content: center;
+    }
+    .link-image {
+        width: 16px;
+        height: 16px;
+    }
+    .header-wrapper2__container {
+
+        padding: 23px 20px;
+        
+    }
+
+    .top-menu__logo-text {
+        padding: 0;
+        margin: 0;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo-text {
+        font-family: $font-family-roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+    .logo-text--blue {
+        color: #0d99ff;
+    }
+    .logo-text--black {
+        color: #282828;
+    }
+
+    .top-menu__navigation-button--mobile {
+        display: none;
+    }
+    .top-menu__navigation-button--desktop {
+        display: block;
+        box-sizing: border-box;
+    height: 36px;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 19px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .header-wrapper1__container {
+        
+        padding: 10px 40px;
+       justify-content: space-between;
+    }
+    .header-wrapper1__actual {
+        margin: 0;
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .header-wrapper1__actual::after {
+        top: 5px;
+        width: 5px;
+        height: 5px;
+    }
+    .header-wrapper1__networks {
+       margin: 0;
+    }
+    .header-wrapper1__work-schedule--desktop {
+        padding-left: 23px;
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .header-wrapper1__work-schedule--desktop::after {
+
+        width: 18px;
+        height: 18px;
+       
+        
+    }
+    .top-menu__logo {
+        margin: 0;
+    }
+.top-menu__wrapper {
+    display: block;
+}
+    
+    .top-menu {
+        display: flex;
+        justify-content: space-between;
+    } 
+    .navigation-networks {
+        display: none;
+    }
+    .top-menu__navigation-list {
+        list-style: 0;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .top-menu__item  {
+        padding: 0;
+        margin: 0;
+        margin-right: 50px;
+    }
+    .top-menu__item:last-child {
+        margin: 0;
+    }
+    .top-menu__item-a {
+        display: flex;
+        font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: #282828;
+    }
+    .top-menu__toggle  {
+        display: none;
+    }
 }
