@@ -1,5 +1,6 @@
-$font-family-roboto: Roboto, -apple-system, BlinkMacSystem, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$font-family-roboto: "Roboto", sans-serif;
 
 body {
     font-family: $font-family-roboto;
@@ -11,6 +12,7 @@ body {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 img {
@@ -59,6 +61,7 @@ summary::marker {
 .button-blue {
     margin: 0;
     padding: 8px 16px;
+
     display: flex;
     justify-content: center;
     align-content: center;
@@ -117,7 +120,6 @@ summary::marker {
 }
 .header-wrapper1__actual span {
     color: #ffffff;
-    
 }
 
 .header-wrapper1__actual::after {
@@ -130,7 +132,6 @@ summary::marker {
     background-color: #27b269;
     border-radius: 50%;
 }
-
 
 .header-wrapper1__work-schedule--desktop {
     display: none;
@@ -196,6 +197,7 @@ summary::marker {
 }
 
 .top-menu__navigation-button--mobile {
+    align-self: center;
     box-sizing: border-box;
     height: 36px;
     margin-right: 15px;
@@ -207,6 +209,7 @@ summary::marker {
     display: none;
 }
 .top-menu__toggle {
+    align-self: center;
     box-sizing: border-box;
     padding: 11px 7px;
     display: flex;
@@ -236,11 +239,9 @@ summary::marker {
 
     .header-wrapper1__actual {
         margin-right: 24px;
-       
     }
     .header-wrapper1__work-schedule {
         display: flex;
-       
     }
     .header-wrapper1__work-schedule--mobile {
         display: none;
@@ -256,7 +257,6 @@ summary::marker {
         font-weight: 400;
         font-size: 12px;
         line-height: 14px;
-        
     }
     .header-wrapper1__work-schedule--desktop::after {
         content: "";
@@ -297,9 +297,7 @@ summary::marker {
         height: 16px;
     }
     .header-wrapper2__container {
-
         padding: 23px 20px;
-        
     }
 
     .top-menu__logo-text {
@@ -329,21 +327,20 @@ summary::marker {
         display: none;
     }
     .top-menu__navigation-button--desktop {
-        display: block;
+        align-self: center;
+        display: flex;
         box-sizing: border-box;
-    height: 36px;
-    margin-right: 20px;
-    font-size: 16px;
-    line-height: 19px;
+        height: 36px;
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 19px;
     }
 }
 
-@media (min-width: 1200px) {
-
+@media (min-width: 1600px) {
     .header-wrapper1__container {
-        
         padding: 10px 40px;
-       justify-content: space-between;
+        justify-content: space-between;
     }
     .header-wrapper1__actual {
         margin: 0;
@@ -356,7 +353,7 @@ summary::marker {
         height: 5px;
     }
     .header-wrapper1__networks {
-       margin: 0;
+        margin: 0;
     }
     .header-wrapper1__work-schedule--desktop {
         padding-left: 23px;
@@ -364,34 +361,42 @@ summary::marker {
         line-height: 15px;
     }
     .header-wrapper1__work-schedule--desktop::after {
-
         width: 18px;
         height: 18px;
-       
+    }
+    .header-wrapper2__container {
+        padding: 30px 40px;
         
     }
     .top-menu__logo {
         margin: 0;
+        margin-right: 10px;
     }
-.top-menu__wrapper {
-    display: block;
-}
-    
+    .top-menu__wrapper {
+        display: flex;
+    }
+
     .top-menu {
         display: flex;
         justify-content: space-between;
-    } 
+    }
     .navigation-networks {
         display: none;
     }
+    .top-menu__navigation-wrapper {
+        display: flex;
+    }
     .top-menu__navigation-list {
-        list-style: 0;
+        list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
         justify-content: space-between;
+        align-content: stretch;
     }
-    .top-menu__item  {
+    .top-menu__item {
+        display: flex;
+        align-items: stretch;
         padding: 0;
         margin: 0;
         margin-right: 50px;
@@ -401,13 +406,19 @@ summary::marker {
     }
     .top-menu__item-a {
         display: flex;
+        align-items: center;
+        font-family: $font-family-roboto;
         font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 19px;
-color: #282828;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #282828;
     }
-    .top-menu__toggle  {
+    .top-menu__navigation-button--desktop {
+       margin: 0;
+       margin-left: 10px;
+    }
+    .top-menu__toggle {
         display: none;
     }
 }

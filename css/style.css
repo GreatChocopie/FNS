@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
-  font-family: Roboto, -apple-system, BlinkMacSystem, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   color: rgb(255, 255, 255);
@@ -8,6 +9,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 img {
@@ -60,7 +62,7 @@ summary::marker {
   align-content: center;
   background: #0d99ff;
   border-radius: 6px;
-  font-family: Roboto, -apple-system, BlinkMacSystem, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   text-align: center;
@@ -100,7 +102,7 @@ summary::marker {
   padding-left: 10px;
   display: flex;
   justify-content: space-between;
-  font-family: Roboto, -apple-system, BlinkMacSystem, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -133,7 +135,7 @@ summary::marker {
   position: relative;
   margin: 0;
   padding-left: 21px;
-  font-family: Roboto, -apple-system, BlinkMacSystem, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -195,6 +197,7 @@ summary::marker {
 }
 
 .top-menu__navigation-button--mobile {
+  align-self: center;
   box-sizing: border-box;
   height: 36px;
   margin-right: 15px;
@@ -207,6 +210,7 @@ summary::marker {
 }
 
 .top-menu__toggle {
+  align-self: center;
   box-sizing: border-box;
   padding: 11px 7px;
   display: flex;
@@ -247,7 +251,7 @@ summary::marker {
     position: relative;
     margin: 0;
     padding-left: 21px;
-    font-family: Roboto, -apple-system, BlinkMacSystem, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -303,7 +307,7 @@ summary::marker {
     justify-content: center;
   }
   .logo-text {
-    font-family: Roboto, -apple-system, BlinkMacSystem, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -320,7 +324,8 @@ summary::marker {
     display: none;
   }
   .top-menu__navigation-button--desktop {
-    display: block;
+    align-self: center;
+    display: flex;
     box-sizing: border-box;
     height: 36px;
     margin-right: 20px;
@@ -328,7 +333,7 @@ summary::marker {
     line-height: 19px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   .header-wrapper1__container {
     padding: 10px 40px;
     justify-content: space-between;
@@ -355,11 +360,15 @@ summary::marker {
     width: 18px;
     height: 18px;
   }
+  .header-wrapper2__container {
+    padding: 30px 40px;
+  }
   .top-menu__logo {
     margin: 0;
+    margin-right: 10px;
   }
   .top-menu__wrapper {
-    display: block;
+    display: flex;
   }
   .top-menu {
     display: flex;
@@ -368,14 +377,20 @@ summary::marker {
   .navigation-networks {
     display: none;
   }
+  .top-menu__navigation-wrapper {
+    display: flex;
+  }
   .top-menu__navigation-list {
-    list-style: 0;
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-between;
+    align-content: stretch;
   }
   .top-menu__item {
+    display: flex;
+    align-items: stretch;
     padding: 0;
     margin: 0;
     margin-right: 50px;
@@ -385,11 +400,17 @@ summary::marker {
   }
   .top-menu__item-a {
     display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #282828;
+  }
+  .top-menu__navigation-button--desktop {
+    margin: 0;
+    margin-left: 10px;
   }
   .top-menu__toggle {
     display: none;
