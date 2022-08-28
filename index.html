@@ -9,7 +9,6 @@
     <meta name="description" content="" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <title>Document</title>
   </head>
@@ -68,18 +67,34 @@
             </p>
           </a>
           <div class="top-menu__wrapper">
+            <div class="top-menu__background">
             <div class="top-menu__navigation-wrapper">
-              <ul class="navigation-networks">
+              <div class="navigation-networks">
+              <ul class="navigation-networks__list">
                 <li class="navigation-networks__item">
-                  <a href="" class="navigation-networks__link-inst"></a>
+                  <a href="" class="navigation-networks__link navigation-networks__link-vk"><img class="navigation-networks__link-image navigation-networks__link-vk"
+                    src="img/vk-blue.svg"
+                    width="18"
+                    height="18"
+                    alt="vk"></a>
                 </li>
                 <li class="navigation-networks__item">
-                  <a href="" class="navigation-networks__link-fb"></a>
+                  <a href="" class="navigation-networks__link navigation-networks__link-fb"><img class="navigation-networks__link-image navigation-networks__link-fb"
+                    src="img/fb-blue.svg"
+                    width="18"
+                    height="18"
+                    alt="vk"></a>
                 </li>
                 <li class="navigation-networks__item">
-                  <a href="" class="navigation-networks__link-ok"></a>
+                  <a href="" class="navigation-networks__link navigation-networks__link-ok"><img class="navigation-networks__link-image navigation-networks__link-ok"
+                    src="img/ok-blue.svg"
+                    width="18"
+                    height="18"
+                    alt="vk"></a>
                 </li>
               </ul>
+              <button class="top-menu__button-close" type="button"></button>
+              </div>
               <ul class="top-menu__navigation-list">
                 <li class="top-menu__item top-menu__item-1">
                   <a href="" class="top-menu__item-a">Выписка из ЕГРЮЛ/ЕГРИП</a>
@@ -100,7 +115,8 @@
                   <a href="" class="top-menu__item-a">Проверить автомобиль</a>
                 </li>
               </ul>
-              <div class="top-menu__button-close"></div>
+              
+            </div>
             </div>
           </div>
           <a href="" class="button-blue top-menu__navigation-button--desktop">Проверить статус заказа</a>
@@ -115,5 +131,7 @@
       </div>
     </div>
   </header>
+  <script src="js/scripts.js"></script>
+    <script src="js/wow.min.js"></script>
   </body>
 </html>
