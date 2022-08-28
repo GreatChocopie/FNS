@@ -61,7 +61,6 @@ summary::marker {
 .button-blue {
     margin: 0;
     padding: 8px 16px;
-
     display: flex;
     justify-content: center;
     align-content: center;
@@ -230,7 +229,7 @@ summary::marker {
 }
 
 // выпадающее меню
-@media (max-width: 1600px) {
+
     .top-menu__wrapper {
         padding: 0;
         margin: 0;
@@ -339,7 +338,7 @@ summary::marker {
         line-height: 19px;
         color: #282828;
     }
-}
+
 
 @media (min-width: 768px) {
     .header-wrapper1__container {
@@ -488,10 +487,20 @@ summary::marker {
         margin-right: 10px;
     }
     .top-menu__wrapper {
+        position: initial;
+        margin-left: 0;
+        width: auto;
         display: flex;
+        height: auto;
+
+        
     }
     .top-menu__background {
         display: flex;
+        justify-content: space-between;
+        height: auto;
+       background-color: transparent;
+       backdrop-filter: initial;
     }
     .top-menu {
         display: flex;
@@ -501,13 +510,21 @@ summary::marker {
         display: none;
     }
     .top-menu__navigation-wrapper {
+        padding: 0;
         display: flex;
+        height: auto;
+        width: auto;
+        background-color: transparent;
     }
+.top-menu__button-close {
+    display: none;
+}
     .top-menu__navigation-list {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-content: stretch;
     }
@@ -517,6 +534,7 @@ summary::marker {
         padding: 0;
         margin: 0;
         margin-right: 50px;
+        border: none;
     }
     .top-menu__item:last-child {
         margin: 0;
